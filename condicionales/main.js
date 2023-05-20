@@ -24,3 +24,15 @@ if (perfectNumber === 0) {
 } else {
   console.log('el número no es 123123125')
 }
+
+//Conversor de edad de perro a humano
+
+let dogAge = document.querySelector('.dog__age').value;
+
+if (dogAge === 1) {
+    console.log ('Tu perro tiene 15 años humanos');
+} else if (dogAge <= 2) {
+    console.log ('Tu perro tiene ' + dogAge*9 + ' años humanos');
+} else {
+    console.log ('Tu perro tiene ' + dogAge*5 + ' años humanos');
+}
