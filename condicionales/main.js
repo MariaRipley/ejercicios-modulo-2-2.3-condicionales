@@ -13,7 +13,7 @@ if (userName === 'María' || userName === 'Luisa') {
 
 let perfectNumber = 17;
 
-if (perfectNumber === 0) {
+if (perfectNumber === 100) {
   console.log('El número es 0')
 } else if (perfectNumber < 0) {
   console.log('El número es negativo')
@@ -27,12 +27,26 @@ if (perfectNumber === 0) {
 
 //Conversor de edad de perro a humano
 
-let dogAge = document.querySelector('.dog__age').value;
+let dogAge = parseInt(document.querySelector('.dog__age').value);
+const firstYear = 15;
+const secondYear = 9;
+const thirdYear = 5;
+const fromFourthOn = ((dogAge-2)*thirdYear)+firstYear+secondYear;
+//1 año = 15
+//2 años = 15+9
+//3 años = 15+9+5
+//4 años = 15+9+5+5
+
+console.log(dogAge);
 
 if (dogAge === 1) {
-    console.log ('Tu perro tiene 15 años humanos');
-} else if (dogAge <= 2) {
-    console.log ('Tu perro tiene ' + dogAge*9 + ' años humanos');
+    console.log (`Tu perro tiene ${firstYear} años humanos`);
+} else if (dogAge === 2) {
+    console.log ('Tu perro tiene ' + (firstYear+secondYear) + ' años humanos');
+} else if (dogAge === 3) {
+    console.log ('Tu perro tiene ' + (firstYear+secondYear+thirdYear) + ' años humanos');
 } else {
-    console.log ('Tu perro tiene ' + dogAge*5 + ' años humanos');
+    console.log ('Tu perro tiene ' + fromFourthOn + ' años humanos');
 }
+
+
